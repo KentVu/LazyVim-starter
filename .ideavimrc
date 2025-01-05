@@ -164,7 +164,8 @@ map <leader>emj <Action>(MoveStatementDown)
 map <leader>emk <Action>(MoveStatementUp)
 map <leader>ez <Action>(ToggleZenMode)
 map <leader>ep <Action>(TogglePowerSave)
-map <leader>em <Action>(MaximizeToolWindow)
+nmap <leader>es <Action>(Synchronize)
+nmap <leader>eM <Action>(MaximizeToolWindow)
 
 "File
 let g:WhichKeyDesc_file = "<leader>f File"

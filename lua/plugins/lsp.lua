@@ -57,8 +57,7 @@ return {
       -- table.insert(opts, value)
       local wk = require("which-key")
       wk.register({
-        mode = { "n", "v" },
-        ["<leader>i"] = { name = "+ideals" },
+        { "<leader>i", group = "ideals", mode = { "n", "v" } },
       })
       opts.servers.ideals = {
         capabilities = capabilities,

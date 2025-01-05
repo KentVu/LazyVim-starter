@@ -14,7 +14,7 @@ return {
       --  vim.keymap.del("n", "gra")
       --  vim.keymap.del("n", "grn")
       --end)
-      vim.keymap.del("x", "gra")
+      --vim.keymap.del("x", "gra")
       local substitute = require("substitute")
       local exchange = require("substitute.exchange")
       -- vim.keymap.set("n", "<leader>ex", require("substitute").operator, { noremap = true, desc = "Substitute" }),

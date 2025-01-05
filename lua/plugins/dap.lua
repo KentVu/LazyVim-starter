@@ -56,13 +56,12 @@ return {
           },
           {
             type = "pwa-chrome",
-            name = "Attach Chrome 9222 url localhost 8080",
+            name = "Attach Chrome 9222 url ..",
             request = "attach",
             url = "http://localhost:8080",
             sourceMaps = true,
             protocol = "inspector",
             port = 9222,
-            webRoot = "${workspaceFolder}/site-manage-thg/src",
             skipFiles = { "**/node_modules/**/*", "**/@vite/*", "**/src/client/*", "**/src/*" },
             sourceMapPathOverrides = {
               ["webpack://package-name/./src/*"] = "${webRoot}/*",

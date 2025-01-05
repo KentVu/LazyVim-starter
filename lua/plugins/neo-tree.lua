@@ -384,6 +384,9 @@ return {
           ["<C-o>"] = "open",
         },
       },
+      filesystem = {
+        group_empty_dirs = true, -- when true, empty folders will be grouped together
+      },
       document_symbols = {
         follow_cursor = true,
       },
