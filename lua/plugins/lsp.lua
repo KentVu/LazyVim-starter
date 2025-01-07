@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "saghen/blink.cmp" },
     -- init = function() end,
     -- see also `:h lspconfig-new`, https://www.lazyvim.org/configuration/examples
     ---@class PluginLspOpts
@@ -12,12 +13,12 @@ return {
         -- substitute mappings changed to "<leader>S"
         { "gr", false },--giving up gr to default nvim lsp.
         -- add a keymap
-        { "<leader>sr", "<Cmd>Telescope lsp_references<CR>", desc = "Telescope lsp_references" } --"grr"
+        { "<leader>sr", "<Cmd>FzfLua lsp_references<CR>", desc = "Telescope lsp_references" } --"grr"
       })
 
       -- thanks https://github.com/SuduIDE/ideals/issues/59#issuecomment-1348761041
       local lspconfig = require("lspconfig")
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
       local configs = require("lspconfig.configs")
       local util = require("lspconfig.util")
 
@@ -66,7 +67,7 @@ return {
           vim.keymap.set(
             "n",
             "<leader>ii",
-            [[<cmd>exec "!'/Applications/Android Studio.app/Contents/MacOS/studio' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
+            [[<cmd>exec "!'/workspaces/android-studio/bin/studio.sh' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
             { buffer = true, noremap = true, desc = "Open in A.Studio" }
           )
         end,
