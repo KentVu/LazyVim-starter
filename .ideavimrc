@@ -226,7 +226,7 @@ nmap <leader>wm <Action>(MaximizeEditorInSplit)
 
 vmap <C-S-V> <Action>(EditorUnSelectWord)
 " Use ctrl-c as an ide shortcut in normal and visual modes
-"sethandler <C-C> n-v:ide i:vim
+sethandler <C-C> v:ide n-i:vim
 " Allow pasting while editing (insert mode)
 "sethandler <C-V> n-v:vim i:ide
 sethandler <C-W> v:ide n-i:vim
@@ -236,6 +236,7 @@ sethandler <C-F> n-v-i:ide
 sethandler <C-F8> n-v-i:ide
 sethandler <C-T> n-v-i:ide
 sethandler <C-G> n-v-i:ide
+sethandler <C-N> n-v:ide i:vim
 "sethandler <Delete> n-v-i:ide
 nmap Y y$
 vmap Y <Action>($Copy)

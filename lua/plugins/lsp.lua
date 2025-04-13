@@ -67,7 +67,7 @@ return {
           vim.keymap.set(
             "n",
             "<leader>ii",
-            [[<cmd>exec "!'/workspaces/android-studio/bin/studio.sh' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
+            [[<cmd>exec "!'/opt/android-studio/bin/studio.sh' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
             { buffer = true, noremap = true, desc = "Open in A.Studio" }
           )
         end,
