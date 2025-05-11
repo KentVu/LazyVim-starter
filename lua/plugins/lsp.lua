@@ -67,13 +67,13 @@ return {
           vim.keymap.set(
             "n",
             "<leader>ii",
-            [[<cmd>exec "!'/opt/android-studio/bin/studio.sh' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
+            [[<cmd>exec "!'/Applications/Android Studio.app/Contents/MacOS/studio' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
             { buffer = true, noremap = true, desc = "Open in A.Studio" }
           )
           vim.keymap.set(
             "n",
             "<leader>is",
-            [[<cmd>!DISPLAY=:1 xdotool key ctrl+s; sleep 0.5<CR>]],
+            [[<cmd>!osascript -e 'tell application "System Events" to keystroke "s" using {command down}'<CR>]],
             { buffer = true, noremap = true, desc = "Save in A.Studio" }
           )
         end,
