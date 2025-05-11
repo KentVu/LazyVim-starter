@@ -113,8 +113,9 @@ nmap <leader>aS :let @"=@*<CR>
 "vmap <leader>ap <Action>($Paste)
 
 "build
-let g:WhichKeyDesc_Build = "<leader>b Build"
+let g:WhichKeyDesc_Build = "<leader>b Build/buffer"
 nmap <leader>bs <Action>(Android.SyncProject)
+"nmap <leader>br <Action>(Synchronize)
 
 "Code/Convert/Change
 let g:WhichKeyDesc_Convert = "<leader>c Code/Convert/Change"
@@ -139,6 +140,7 @@ nmap <leader>cu <Action>(ConvertToUnixLineSeparators)
 let g:WhichKeyDesc_Debug = "<leader>d Debug"
 nmap <leader>db <Action>(ToggleLineBreakpoint)
 nmap <leader>dr <Action>(Run)
+nmap <leader>d. <Action>(Rerun)
 nmap <leader>dR <Action>(ChooseRunConfiguration)
 nmap <leader>dd <Action>(Debug)
 nmap <leader>dD <Action>(ChooseDebugConfiguration)
@@ -150,6 +152,7 @@ let g:WhichKeyDesc_editor = "<leader>e Editor (most frequent)"
 map <leader>ee <Action>(RecentFiles)
 "nmap <leader>f <Action>(Find)
 map <leader>er <Action>(Switcher)
+"map <leader>ek <Action>(KeepTabOpen)
 map <leader>eK <Action>(CheckinProject)
 map <leader>eo <Action>(HideAllWindows)
 nmap <leader>el <Action>(RecentLocations)
@@ -218,9 +221,13 @@ nmap <leader>ru <Action>(MembersPullUp)
 let g:WhichKeyDesc_New = "<leader>n New/Code generation"
 nmap <leader>nn <Action>(Generate)
 
-"add New/Code generation
+"window
 let g:WhichKeyDesc_New = "<leader>w Window"
 nmap <leader>wm <Action>(MaximizeEditorInSplit)
+
+"ui
+let g:WhichKeyDesc_New = "<leader>u UI"
+nmap <leader>uw <Action>(EditorToggleUseSoftWraps)
 
 "tools"
 
