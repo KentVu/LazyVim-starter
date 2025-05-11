@@ -70,6 +70,12 @@ return {
             [[<cmd>exec "!'/opt/android-studio/bin/studio.sh' --line ".line('.')." --column ".(col('.')-1)." %:p"<CR>]],
             { buffer = true, noremap = true, desc = "Open in A.Studio" }
           )
+          vim.keymap.set(
+            "n",
+            "<leader>is",
+            [[<cmd>!DISPLAY=:1 xdotool key ctrl+s; sleep 0.5<CR>]],
+            { buffer = true, noremap = true, desc = "Save in A.Studio" }
+          )
         end,
       }
       --opts.setup.ideals = function(server, opts)
